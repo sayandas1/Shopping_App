@@ -1,0 +1,28 @@
+    <%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+    </head>
+
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+                <div class="outerdiv">
+                    <div class="formsec">
+                    <form method="post" action="postdata">
+                        <h1>Add New Product</h1>
+                        <label for="name">Product Name</label><br>
+                        <input type="text" name="name"><br><br>
+                        <label for="price">Product Price</label><br>
+                        <input type="text" name="price"><br><br>
+                        <label for="description">Product Description</label><br>
+                        <input type="text" name="description"><br><br>
+                        <input type="submit" value="ADD  PRODUCT">
+                    </form>
+                </div>
+                </div>
+
+
+
+
+
+
+
+            <%-include('../Includes/footer.ejs')%>

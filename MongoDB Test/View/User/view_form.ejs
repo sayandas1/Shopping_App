@@ -1,0 +1,39 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+</head>
+<body>
+    <%-include('../Includes/navbar.ejs')%>
+    <%if(data.length>0){%>
+        <div class="search" style="margin-top: 10px;">
+            <form action="/search" method="post">
+                <input type="text" name="search" placeholder="Search" style="margin-left: 900px;">
+                <button type="submit" class="btn btn-primary">Search</button>
+               </form></div>
+      <center>
+         <table border="1" style="margin-top: 25px; width: 900px; text-align: center;">
+           <tr>
+           <th>First Name</th>
+           <th>Last Name</th>
+           <th>City</th>
+           <th>Pin</th>
+           <th>Phone</th>
+           <th>Email</th>
+           </tr>
+           <%for (let x of data){%>
+           <tr>
+            <td><%=x.fName%></td>
+            <td><%=x.lName%></td>
+            <td><%=x.city%></td>
+            <td><%=x.pin%></td>
+            <td><%=x.phone%></td>
+            <td><%=x.email%></td>
+            </tr>
+            <%}%>
+         </table>
+        </center>
+         <%}else{%>
+          <h1>Data not found.</h1>
+          <%}%>
+
+
+    <%-include('../Includes/footer.ejs')%>

@@ -1,0 +1,74 @@
+body{
+    background-image: linear-gradient(to top,#f8a0f3,#9554ac);
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.outerdiv{
+    height: 76vh;
+    width: 50%;
+    margin: auto;
+    margin-top: 12vh;
+    border-radius: 80px;
+}
+
+.imagesec{
+    background-image: url('images/feature.jpg');
+    background-repeat: no-repeat;
+    width: 50%;
+    float: left;
+    height: 76vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.formsec{
+    background-color: black;
+    width: 50%;
+    float: right;
+    height: 74vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 2vh;
+}
+
+h2{
+    margin-left: 40px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+input[type="text"],input[type="email"]{ 
+    background-color: black;
+    display: block;
+    width: 70%;
+    margin-left: 40px;
+    border: none;
+    border-bottom: 1px white solid;
+    color: white;
+    margin-bottom: 40px;
+}
+
+::placeholder{
+    color: white;
+}
+
+select{
+    margin-left: 40px;
+    width: 70%;
+    border: none;
+    border-bottom: 1px white solid;
+    background-color: black;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input[type="submit"]{
+    background-color:  #3cbe13;
+    color: white;
+    margin-left: 40px;
+    height: 30px;
+    width: 30%;
+    border-radius: 40px;
+    border-color: black;
+}

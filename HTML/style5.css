@@ -1,0 +1,20 @@
+
+
+input[type="text"],input[type="email"]{ 
+    background-color: black;
+    display: block;
+    width: 30%;
+    border: none;
+    border-bottom: 1px white solid;
+    color: white;
+    margin: auto;
+    margin-top: 40px;
+}
+
+::placeholder{
+    color: white;
+}
+
+body{
+    background-color: black;
+}

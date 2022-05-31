@@ -1,0 +1,28 @@
+    <%-include('../Includes/header.ejs')%>
+    </head>
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+        <br>
+        <%if(data.length>0){%>
+          <center>
+             <table border="1" style="width: 1000px; text-align: center; border: 2px solid;">
+               <tr>
+               <th>Product Name</th>
+               <th>Product Price</th>
+               <th>Product Description</th>
+               </tr>
+               <%for (let x of data){%>
+               <tr>
+                <td><%=x.pName%></td>
+                <td><%=x.pPrice%></td>
+                <td><%=x.pDesc%></td>
+                </tr>
+                <%}%>
+             </table>
+            </center>
+             <%}else{%>
+              <h1>Data not found.</h1>
+              <%}%>
+
+
+        <%-include('../Includes/header.ejs')%>

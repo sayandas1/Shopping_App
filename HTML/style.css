@@ -1,0 +1,34 @@
+body{
+    background-image: url('images/tiger.jfif');
+    background-repeat: no-repeat;
+}
+
+h2{
+    font-weight:bolder;
+    color: #dc1d19;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+}
+
+form{
+    text-align: left;
+    font-size: larger;
+    color: #a702e6;
+    border: #dc1d19;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+legend{
+    color: #6bf176;
+    size: 10px;
+}
+
+input{
+    font-size: medium;
+    color: #0556fe;
+}
+
+select{
+    color: #4181f1;
+}

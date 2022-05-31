@@ -1,0 +1,26 @@
+body{
+    background-image: linear-gradient(to top right, #87a9e5, #9ff16f, #2a09b1);
+}
+
+table{
+    background-image: url('images/flower.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: azure;
+}
+
+h2{
+    color: #fd9971;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+th{
+    color: #970906;
+}
+
+td{
+    color: blue;
+}

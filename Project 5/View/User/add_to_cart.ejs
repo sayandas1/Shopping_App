@@ -1,0 +1,62 @@
+<%- include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/cart.css">
+<body>
+    <%- include('../Includes/navigation.ejs')%><br><br>
+    <%if(data.length>0){%>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-8 cart">
+                    <div class="title">
+                        <div class="row">
+                            <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                            <div class="col align-self-center text-right text-muted">1 items</div>
+                        </div>
+                    </div>  
+                    <table>
+                    <div class="row border-top border-bottom">
+                        <%for(let x of data){%>
+                        <div class="row main align-items-center">
+                            <div class="col-2"><img class="img-fluid" src="../../<%=x.cart[0].pImage%>"></div>
+                            <div class="col">
+                                <div class="row text-muted"><%=x.cart[0].pName%></div>
+                                <div class="row"><%=x.cart[0].pDesc%></div>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="col">
+                                <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                            </div>
+                            <div class="col">₹<%=x.cart[0].pPrice%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/cartDelete/<%=x._id%>" ><i class="fa-solid fa-trash" style="color: red;"></i></a></div>
+                        </div>
+                        <%}%> 
+                        <%}else{%>
+                        <h1>Data not found.</h1>
+                        <%}%>
+                    </div>
+                   </table>  
+                    <div class="back-to-shop"><a href="/viewuser_products">Back to shop &leftarrow;</a><span class="text-muted"></span></div>
+                </div>
+                <div class="col-md-4 summary">
+                    <div><h5><b>Summary</b></h5></div>
+                    <hr>
+                    <div class="row">
+                        <div class="col" style="padding-left:0;">ITEMS 1</div>
+                        <div class="col text-right">₹ 132.00</div>
+                    </div>
+                    <form>
+                        <p>SHIPPING</p>
+                        <select><option class="text-muted">Standard-Delivery- ₹5.00</option></select>
+                        <p>GIVE CODE</p>
+                        <input id="code" placeholder="Enter your code">
+                    </form>
+                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                        <div class="col">TOTAL PRICE</div>
+                        <div class="col text-right">₹ 137.00</div>
+                    </div>
+                    <button class="btn">CHECKOUT</button>
+                </div>
+            </div> 
+        </div><br><br><br>
+
+        <%- include('../Includes/footer.ejs')%>
+        
+        

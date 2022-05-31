@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h2>Food Delivery Form</h2>
+
+ <form>
+ <p>
+  <label for="fname">First name:</label><br>
+  <input type="text" name="fname" placeholder="enter your first name"> </p>
+  <p>
+  <label for="lname">Last name:</label><br>
+  <input type="text"  name="lname" placeholder="enter your last name"></p>
+  <p>
+  <label for="email">Email:</label><br>
+  <input type="email"  name="email" placeholder="email"></p>
+  <p>
+  <label for="phone">Phone:</label><br>
+  <input type="number"  name="phone" placeholder="phone"></p>
+  <p>
+  <label for="password">Password:</label><br>
+  <input type="password" name="password" placeholder="password"></p>
+  <fieldset>
+      <legend>What Food do you require?</legend>
+      <p>
+        <label for="food">Indian:</label><br>
+        <input type="radio" name="food"></p>
+      <p>
+        <label for="food">Chinese:</label><br>
+        <input type="radio" name="food">   
+      </p>
+      <p>
+        <label for="food">Italian:</label><br>
+        <input type="radio" name="food">   
+      </p>
+      <p>
+        <label for="food">Continental:</label><br>
+        <input type="radio" name="food">   
+      </p>
+  </fieldset><br>
+
+  <fieldset>
+      <legend>Extras:</legend>
+      <p>
+        <label for="food">Spoon:</label><br>
+        <input type="checkbox" name="spoon">   
+      </p>
+      <p>
+        <label for="food">Plate:</label><br>
+        <input type="checkbox" name="plate">   
+      </p>
+      <p>
+        <label for="food">Tissue:</label><br>
+        <input type="checkbox" name="tissue">   
+      </p>
+  </fieldset>
+
+  <p>
+    <label for="datetime">Delivery Date/Time:</label>
+    <input type="datetime-local" name="datetime">   
+  </p>
+  <p>
+    <label for="place">Delivery Place:</label>
+    <input list="place" placeholder="select place">
+    <datalist id="place">
+        <option>Tollygunge</option>
+        <option>Jadavpur</option>
+        <option>Garia</option>
+        <option>Dhakuria</option>
+    </datalist> 
+    <!-- <select name="place">
+        <option>Choose one</option>
+        <option>Tollygunge</option>
+        <option>Jadavpur</option>
+        <option>Garia</option>
+        <option>Dhakuria</option>
+    </select>    -->
+  </p>
+  <p>
+    <label for="resume">Upload resume:</label>
+    <input type="file">
+  </p>
+  <p>
+      <label for="instructions">Delivery Instructions:</label><br>
+      <textarea placeholder="Write your instructions here"></textarea></p>
+  <input type="submit" value="Register">
+</form>
+</body>
+</html>

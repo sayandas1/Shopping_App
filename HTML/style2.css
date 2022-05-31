@@ -1,0 +1,17 @@
+body{
+    background-color: #71fded;
+}
+
+img{
+    width: 40vh;
+    image-resolution: 1080px;
+    border: solid;
+    border-color: blueviolet;
+}
+
+table{
+    background-color: brown;
+    border-color: black;
+    border-width: 3px;
+    float: right;
+}

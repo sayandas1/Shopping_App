@@ -1,0 +1,1 @@
+//Temporal Dead Zone: Time gap between variable define and variable initialization is called temporal dead zone. It only happens on let and const.

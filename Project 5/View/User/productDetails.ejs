@@ -1,0 +1,88 @@
+<%-include('../Includes/header.ejs')%>
+  <link rel="stylesheet" type="text/css" href="/CSS/details.css">
+  </head>
+
+  <body>
+    <%-include('../Includes/navigation.ejs')%>
+    <div class="container mt-5 mb-5">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-6 border-end">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="main_image">
+                <img src="../../<%=data.pImage%>" id="main_product_image" width="350">
+              </div>
+              <!-- <div class="thumbnail_images">	
+                        <ul id="thumbnail">
+                            <li><img onclick="changeImage(this)" src="<%=data.pImage%>" width="70"></li>
+                              <li><img onclick="changeImage(this)" src="<%=data.pImage%>" width="70"></li>
+                                <li><img onclick="changeImage(this)" src="<%=data.pImage%>" width="70"></li>
+                                  <li><img onclick="changeImage(this)" src="<%=data.pImage%>" width="70"></li>	
+                                </ul>	
+                              </div> -->
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 right-side">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3>
+                  <%=data.pName%>
+                </h3>
+                <span class="heart">
+                  <i style="color: red;" class="fa-solid fa-heart"></i>
+                </span>
+              </div>
+              <div class="mt-2 pr-3 content">
+                <p style="font-size: medium;">
+                  <%=data.pDesc%>
+                </p>
+              </div>
+              <h3>
+                ₹<%=data.pPrice%>
+              </h3>
+              <div class="ratings d-flex flex-row align-items-center">
+                <div class="d-flex flex-row">
+                  <i style="color: rgb(238, 120, 42);" class="fa-solid fa-star"></i>
+                  <i style="color: rgb(238, 120, 42);" class="fa-solid fa-star"></i>
+                  <i style="color: rgb(238, 120, 42);" class="fa-solid fa-star"></i>
+                  <i style="color: rgb(238, 120, 42);" class="fa-solid fa-star"></i>
+                  <i style="color: rgb(238, 120, 42);" class="fa-solid fa-star"></i>
+                </div>
+                <span>441 reviews</span>
+              </div>
+              <div class="mt-5">
+                <span class="fw-bold">Color</span>
+                <div class="colors">
+                  <ul id="marker">
+                    <li id="marker-1"></li>
+                    <li id="marker-2"></li>
+                    <li id="marker-3"></li>
+                    <li id="marker-4"></li>
+                    <li id="marker-5"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buttons d-flex flex-row mt-5 gap-3">
+                <button class="btn btn-outline-dark">Buy Now</button>
+                <form action="/addToCart" method="POST">
+                  <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+                  <input type="hidden" name="product_id" value="<%=data._id%>">
+                  <input type="hidden" name="quantity" value="1">
+                  <button type="submit" class="btn btn-dark" style="text-decoration: none; color: white">Add to Cart</button>
+              </form>
+              </div>
+              <!-- <div class="search-option">
+                <i class="fa-brands fa-searchengin"></i>
+                <div class="inputs">
+                  <input type="text" name="">
+                </div>
+                <i class="fa-solid fa-share"></i>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <%-include('../Includes/footer.ejs')%>

@@ -1,0 +1,64 @@
+body{
+    background-image: linear-gradient(to top left,#eb2a53 ,#70228C ,#111C7A );
+    background-repeat: no-repeat;
+    height: 91vh;
+    padding-top: 50px;
+    /* padding-left: 20px; */
+    /* margin: auto; */
+}
+
+div{
+    background-color: #10BCE9;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 60vh;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+#form{
+    background-color: white;
+    margin: auto;
+    margin-top: 30px;
+    width: 40%;
+    height: 35vh;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+h2{
+    color: #0DB4E0 ;
+    font-size: large;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+}
+
+input{
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    /*  */
+    width: 97%;
+    height: 30px;
+}
+
+::placeholder{
+    size: 30px;
+    text-align: left;
+}
+
+input[type="submit"]{
+    background-color: #0DB4E0;
+    width: 100%;
+    color: white;
+    border-width: 0ch;
+    height: 35px;
+}

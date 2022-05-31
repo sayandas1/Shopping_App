@@ -1,0 +1,19 @@
+{
+  "name": "node-practice",
+  "version": "1.0.0",
+  "description": "a express practice season",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Sayan Das",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0"
+  }
+}

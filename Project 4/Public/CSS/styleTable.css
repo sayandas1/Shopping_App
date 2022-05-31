@@ -1,0 +1,18 @@
+table{
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    background-color: rgb(125, 125, 211);
+}
+
+th{
+    color: rgb(229, 249, 55);
+}
+
+td{
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(to top right,rgb(189, 100, 230),rgb(104, 231, 138));
+}

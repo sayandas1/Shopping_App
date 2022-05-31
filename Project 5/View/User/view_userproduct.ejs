@@ -1,0 +1,38 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/shop.css">
+    </head>
+
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+
+            <br>
+            <%if(data.length>0){%>
+             <div class="search">
+             <form action="/search" method="POST">
+            <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+            <input type="text" name="search" placeholder="Search a product..." style="margin-left: 950px; text-align: center;">
+             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            </div>
+                <div class="container">
+                    <div class="row">
+                        <%for(let x of data){%>
+                            <div class="col-lg-4">
+                            <div class="card border-dark mb-3" style="max-width: 22rem; text-align: center;">
+                                <div class="card-header"><img class="card-img-top" src="<%=x.pImage%>" height="200" alt="Card image cap"></div>
+                                <div class="card-body text-dark bg-light">
+                                  <h5 class="card-title"><%=x.pName%></h5>
+                                  <h5 class="card-title" style="color: rgb(26, 224, 26);">₹<%=x.pPrice%></h5>
+                                  <p class="card-text"><%=x.pDesc%></p>
+                                  <a href="/details/<%=x._id%>" class="btn btn-primary" style="width: 140px; color: white;">Details</a>
+                                </div>
+                              </div>
+                            </div>
+                            <%}%>  
+                       </div>
+                       </div>
+                       <%}else{%>
+                        <h1>Data not found.</h1>
+                        <%}%><br><br>
+
+                    <%-include('../Includes/footer.ejs')%>

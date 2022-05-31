@@ -1,0 +1,35 @@
+body{
+    background-color: #ff4f5c;
+}
+
+table{
+    color: aquamarine;
+    border: black solid 3px;
+    background-color: aqua;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+th{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #9d0388;
+}
+
+td{
+    color: blue;
+    font-style: oblique;
+}
+
+image{
+    border: wheat solid 4px;
+}
+
+input{
+    color: blueviolet;
+}
+
+select{
+    color: chartreuse;
+}

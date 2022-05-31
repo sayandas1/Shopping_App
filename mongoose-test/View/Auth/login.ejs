@@ -1,0 +1,30 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/login.css">
+</head>
+
+<body>
+    <%-include('../Includes/navigation.ejs')%>
+    <br>
+    <div id="form">
+        <form action="postLogin" method="post">
+            <h2 id="login"><b>Login Form</b></h2>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email">
+            <br><br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="pwd"><br><br>
+            <a id="forgot">Forgot Password?</a><br>
+            <p>
+            <input id="submit" type="submit" value="LOGIN"></p>
+            <p id="member">
+                Not a member? <a id="signup" href="/registration">Signup now</a>
+            </p>
+            <%if(errorMsg){%>
+                <div class="errorMessage"><%=errorMsg%></div>
+            <%}%><br>
+        </form>
+    </div><br><br>
+
+            <%-include('../Includes/footer.ejs')%>

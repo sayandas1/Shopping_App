@@ -1,0 +1,8 @@
+body{
+    background-image: url('images/butterfly.jpeg');
+    background-repeat: repeat-x;
+    background-attachment: scroll;
+    background-position: top center;
+    background-clip: border-box;
+    background-size: cover;
+}

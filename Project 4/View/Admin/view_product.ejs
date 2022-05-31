@@ -1,0 +1,37 @@
+    <%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet" type="text/css" href="/CSS/styleTable.css">
+    </head>
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+        <%if(data.length>0){%>
+          <center>
+             <table border="1" style="margin-top: 25px; width: 700px; height: 80vh; text-align: center;">
+               <tr>
+               <th>Product Name</th>
+               <th>Product Price</th>
+               <th>Product Description</th>
+               <th>Edit Product</th>
+               <th>Delete Product</th>
+               </tr>
+               <%for (let x of data){%>
+               <tr>
+                <td><%=x.pName%></td>
+                <td><%=x.pPrice%></td>
+                <td><%=x.pDesc%></td>
+                <td><a href="/edit/<%=x._id%>" class="btn btn-white" style="height: 35px; color: black;">Edit Link</a></td>
+                <td><a href="/delete/<%=x._id%>" class="btn btn-white" style="height: 35px; color: black;">Delete(GET)</a>
+                  <form action="/postDeletedValue" method="post">
+                    <input type="hidden" name="product_id" value="<%=x._id%>">
+                    <button type="submit" class="btn btn-delete">Delete(POST)</button>
+                  </form>
+                </td>
+                </tr>
+                <%}%>
+             </table>
+            </center>
+             <%}else{%>
+              <h1>Data not found.</h1>
+              <%}%>
+
+
+        <%-include('../Includes/header.ejs')%>

@@ -1,0 +1,32 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+</head>
+
+<body>
+    <%-include('../Includes/navbar.ejs')%>
+            <div class="outerdiv">
+                <div class="formsec">
+                    <center>
+                <form method="post" action="/post_data">
+                    <h1>Registration Form</h1><br>
+                    <label for="fname">First Name</label><br>
+                    <input type="text" name="fname"><br><br>
+                    <label for="lname">Last Name</label><br>
+                    <input type="text" name="lname"><br><br>
+                    <label for="city">City</label><br>
+                    <input type="text" name="city"><br><br>
+                    <label for="pin">Pin</label><br>
+                    <input type="number" name="pin"><br><br>
+                    <label for="phone">Phone</label><br>
+                    <input type="number" name="phone"><br><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email"><br><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="pwd"><br><br><br>
+                    <input style="background-color: rgb(32, 219, 32); border: none; font-weight: bold; color: rgb(230, 14, 14);" type="submit" value="Submit">
+                </form>
+            </center>
+            </div>
+            </div>
+
+            <%-include('../Includes/footer.ejs')%>

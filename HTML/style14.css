@@ -1,0 +1,117 @@
+#first{
+    background-image: url('images/night.jpg');
+    color: white;
+    width: 50%;
+    text-align: justify;
+    font-size: small;
+    /* border: black 2px solid; */
+    padding-left: 40px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+#second{
+    background-color: white;
+    width: 50%;
+    font-size: x-small;
+    /* border: black 2px solid; */
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+body{
+    background-image: radial-gradient(#e4e671,#004a90);
+    background-repeat: no-repeat;
+    height: 85vh;
+}
+
+table{
+    margin: auto;
+    margin-top: 80px;
+    width: 50%;
+    height: 70vh;
+}
+
+h2{
+    text-align: center;
+    font-size: large;
+}
+
+td{
+    text-align: center;
+}
+
+input{
+    width: 81%;
+    margin: 0;
+    border-top-style: hidden;
+    border-width: 1px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    width: 35%;
+    font-size: xx-small;
+    background-color: #039a34;
+    color: white;
+    height: 25px;
+}
+
+label{
+    border: 1px solid black;
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    padding-left: 8px;
+    padding-top: 5px;
+    height: 20px;
+}
+
+/* #fn{
+    float: left;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+#ln{
+    float: right;
+    width: 40%;
+    margin-bottom: 20px;
+} */
+
+::placeholder{
+    padding-left: 5px;
+}
+
+textarea{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+a{
+    padding-left: 20px;
+}
+
+#phone,#contact,.address{
+    color: green;
+    padding-left: 30px;
+}
+
+.address{
+    color: white;
+}
+.left{
+    width:40%;
+    /* background:palevioletred; */
+    float:left;
+    margin-left:8%;
+    margin-right: 0;
+    margin-bottom:10px;
+}
+.right{ 
+     width:40%;
+    /* background:palevioletred; */
+    float:right;
+    margin-right:8%;
+    margin-left: 0;
+    margin-bottom:10px;
+ }

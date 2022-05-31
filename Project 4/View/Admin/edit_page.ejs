@@ -1,0 +1,25 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/style1.css">
+</head>
+<body>
+    <%-include('../Includes/navigation.ejs')%>
+      <center>
+        <div class="outerdiv">
+            <div class="formsec">
+            <form action="/postEditedValue" method="post">
+                <h1>Update Product</h1><br>
+                <label for="name">Product Name:</label><br>
+                <input type="text" name="name" value="<%=data.pName%>"><br><br>
+                <label for="price">Product Price:</label><br>
+                <input type="text" name="price" value="<%=data.pPrice%>"><br><br>
+                <label for="description">Product Description:</label><br>
+                <input type="text" name="description" value="<%=data.pDesc%>"><br><br>
+                <input type="hidden" name="id" value="<%=data._id%>">
+                <input type="submit" value="UPDATE">
+            </form>
+        </div>
+        </div>
+        </center>
+
+
+    <%-include('../Includes/header.ejs')%>

@@ -1,0 +1,29 @@
+body{
+    background-image: radial-gradient(#9b3dfa, #3becf7, #41f697);
+}
+
+h2{
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+    color: #ff6753;
+}
+
+table{
+    font-style: italic;
+    border: brown dotted 3px;
+    text-align: center;
+    table-layout: fixed;
+}
+
+image{
+    border: #151514 groove 3px;
+}
+
+th{
+    color: #7307f1;
+}
+
+td{
+    color: #ff4fe7;
+}

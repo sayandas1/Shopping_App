@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+    </head>
+    <body>
+        <%if(data.length>0){%>
+            <%for(let x of data){%>
+                <h3>Fullname: <%=x.firstname%> <%=x.lastname%></h3>
+                <h5>Email: <%=x.email%></h5>
+            <%}%>
+            <%}else{%>
+                <h1>Data not found.</h1>
+        <%}%>
+    </body>
+</html>

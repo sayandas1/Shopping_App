@@ -1,0 +1,39 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+<script>
+    function checkforBlank()
+    {
+        if(document.getElementById('name').value == "");
+        alert("Please add an item");
+        return false;
+    }
+</script>
+</head>
+
+<body>
+    <%-include('../Includes/navigation.ejs')%>
+            <div class="outerdiv">
+                <div class="formsec">
+                <form method="post" action="postdata" enctype="multipart/form-data" onsubmit="return checkforBlank()">
+                    <h1>Add New Item</h1>
+                    <label for="name">Item Name</label><br>
+                    <input type="text" name="name"><br>
+                    <label for="category">Item Category</label><br>
+                    <select name="category">
+                        <option selected>Choose one</option>
+                        <option>Category A</option>
+                        <option>Category B</option>
+                        <option>Category C</option>
+                    </select><br><br>
+                    <label for="image">Item Image</label><br>
+                    <input type="file" name="image"><br><br>
+                    <input type="submit" value="ADD ITEM">
+                    <%if(errorMsg){%>
+                        <div class="errorMessage"><%=errorMsg%></div>
+                    <%}%><br>
+                </form>
+            </div>
+            </div><br><br>
+
+
+        <%-include('../Includes/footer.ejs')%>

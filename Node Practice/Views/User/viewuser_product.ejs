@@ -1,0 +1,27 @@
+<%-include('../Includes/header.ejs')%>
+</head>
+<body>
+<%-include('../Includes/navbar.ejs')%>
+<%if(data.length>0){%>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <%for(let x of data){%>
+          <div class="col-lg-4">
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-success"><h5><%=x.pName%></h5></div>
+                <div class="card-body text-success">
+                  <h5 class="card-title"><%=x.pPrice%></h5>
+                  <p class="card-text"><%=x.pDesc%></p>
+                  <button class="btn btn-primary">Details</button>
+                </div>
+               </div>
+               </div>
+                <%}%>
+              </div>
+              </div>
+          <%}else{%>
+            <h1>Data not found</h1>
+            <%}%>
+
+
+<%-include('../Includes/footer.ejs')%>

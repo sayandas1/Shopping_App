@@ -1,0 +1,22 @@
+label,input[type="text"],input[type="email"],input[type="password"],input[type="submit"]{
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: gold;
+    padding-left: 5px;
+    font-size: large;
+}
+
+#myform{
+    background-color: blueviolet;
+    margin: auto;
+    width: 60%;
+    height: 50vh;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+::placeholder{
+    color: brown;
+    font-style: italic;
+}

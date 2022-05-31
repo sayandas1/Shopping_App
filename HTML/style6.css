@@ -1,0 +1,11 @@
+h1,h2,table{
+    color: blue;
+    margin-top: 20px;
+    text-align: left;
+}
+
+*{
+    color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

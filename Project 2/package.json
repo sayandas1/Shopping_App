@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "express project",
+  "main": "server.js",
+  "author": "Sayan Das",
+  "license": "ISC"
+}

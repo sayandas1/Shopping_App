@@ -1,0 +1,17 @@
+table{
+    border: 1px solid black;
+    background-color: white;
+}
+
+th{
+    color: black;
+    padding-top: 20px;
+}
+
+td{
+    color: black;
+}
+
+body{
+    background-image: url('../images/cloud3.webp');
+}

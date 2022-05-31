@@ -1,0 +1,58 @@
+.nav-link{
+    color: darkblue !important;
+    size: 40px;
+    margin-left: 20px;
+}
+.nav-link:hover{
+    background-color: blue;
+    color: white !important;
+}
+.newlink:hover{
+    background-color: red !important;
+}
+.carousel{
+    margin-top: 10px;
+}
+h2{
+    text-align: center;
+}
+.icon{
+    font-size: 80px;
+    margin-left: 35%;
+}
+.card{
+    background-color: rgb(233, 232, 232) !important;
+    height: 75vh;
+}
+.card:hover{
+    background-color: white !important;
+}
+.btn{
+    background-color: darkblue !important;
+    color: white !important;
+    text-align: center;
+    margin-left: 50px;
+}
+.btn:hover{
+    background-color: white !important;
+    color: darkblue !important;
+}
+.aboutus{
+    background-color: rgb(44, 44, 190) !important;
+    margin-top: 50px;
+}
+.footer-sec{
+    padding-top: 30px;
+}
+.link-list{
+    color: gray;
+}
+.link-list:hover{
+    color: white !important;
+}
+.address-bar,.contact{
+    color: gray;
+}
+#sub-footer{
+    background-color: black;
+}

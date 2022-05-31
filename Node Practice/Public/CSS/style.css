@@ -1,0 +1,40 @@
+.formstyle{
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 60%;
+    height: 80vh;
+    background-image: url('../images/night.jpg');
+    text-align: center;
+}
+
+h1{
+    color: rgb(247, 70, 70);
+    margin-bottom: 30px;
+}
+
+input[type="text"]{
+    width: 40%;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    width: 41%;
+    background-color: blue;
+    color: chartreuse;
+    height: 5vh;
+    font-weight: bold;
+    border: none;
+}
+
+::placeholder{
+    text-align: center;
+}
+
+label{
+    color: rgb(219, 244, 28);
+    font-weight: bold;
+    font-size: large;
+}

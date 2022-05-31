@@ -1,0 +1,30 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/styleTable.css">
+</head>
+<body>
+    <%-include('../Includes/navigation.ejs')%>
+    <%if(data.length>0){%>
+      <center>
+         <table border="1" style="margin-top: 25px; width: 700px; height: 80vh; text-align: center;">
+           <tr>
+           <th>Item Name</th>
+           <th>Item Category</th>
+           <th>Item Images</th>
+           <th>Item Details</th>
+           </tr>
+           <%for (let x of data){%>
+           <tr>
+            <td><%=x.iName%></td>
+            <td><%=x.iCategory%></td>
+            <td><img src="<%=x.iImage%>" alt="" width="75" height="75"></td>
+            <td><a href="/details/<%=x._id%>" class="btn btn-primary">Details</a></td>
+            </tr>
+            <%}%>
+         </table>
+        </center>
+         <%}else{%>
+          <h1>Data not found.</h1>
+          <%}%><br><br>
+
+
+          <%-include('../Includes/footer.ejs')%>
