@@ -1,0 +1,39 @@
+    <%-include('../Includes/header.ejs')%>
+    <link rel="stylesheet" type="text/css" href="/CSS/styleTable.css">
+    </head>
+    <body>
+        <%-include('../Includes/navigation.ejs')%>
+        <%if(data.length>0){%>
+          <center>
+             <table style="margin-top: 25px; width: 1200px; height: 80vh; text-align: center;">
+               <tr>
+               <th>Name</th>
+               <th>Images</th>
+               <th>Price</th>
+               <th>Description</th>
+               <th>Action</th>
+               </tr>
+               <%for (let x of data){%>
+               <tr>
+                <td><%=x.pName%></td>
+                <td><img src="<%=x.pImage%>" alt="" width="75" height="75"></td>
+                <td><%=x.pPrice%></td>
+                <td><%=x.pDesc%></td>
+                <td><a href="/edit/<%=x._id%>" class="btn btn-white" style="height: 35px; color: black;"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="/delete/<%=x._id%>" class="btn btn-white" style="height: 35px; color: black;"><i class="fa-solid fa-trash"></i></a>
+                  <!-- <form action="/postDeletedValue" method="POST">
+                    <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+                    <input type="hidden" name="product_id" value="<%=x._id%>">
+                    <button type="submit" class="btn btn-delete"><i class="fa-solid fa-trash"></i></button>
+                  </form> -->
+                </td>
+                </tr>
+                <%}%>
+             </table>
+            </center>
+             <%}else{%>
+              <h1>Data not found.</h1>
+              <%}%><br><br>
+
+
+              <%-include('../Includes/footer.ejs')%>

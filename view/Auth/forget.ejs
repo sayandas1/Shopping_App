@@ -1,0 +1,21 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/forget.css">
+</head>
+
+<body>
+    <%-include('../Includes/navigation.ejs')%>
+    <br>
+    
+    <div id="form">
+        <form action="/post_forget_password" method="POST">
+            <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+            <label for="email">Enter Your Email</label>
+            <br>
+            <input type="email" name="email">
+            <br><br>
+            <p>
+            <input id="submit" type="submit" value="SUBMIT"></p>
+        </form>
+    </div><br><br>
+
+    <%-include('../Includes/footer.ejs')%>
