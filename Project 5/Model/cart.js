@@ -17,6 +17,9 @@ const CartSchema = new SchemaVariable({
     cart: [{
         type: Object,
         required: true
+    },
+    {
+        timestamps: true
     }],
 })
 

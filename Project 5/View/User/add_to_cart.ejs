@@ -12,10 +12,16 @@
                             <div class="col align-self-center text-right text-muted">1 items</div>
                         </div>
                     </div>  
+                    <%for(let x of data){%>
                     <table>
                     <div class="row border-top border-bottom">
-                        <%for(let x of data){%>
                         <div class="row main align-items-center">
+                            <div class="item">
+                                <div class="buttons">
+                                  <span class="delete-btn"><a href="/cartDelete/<%=x._id%>"></a></span>
+                                  <span class="like-btn"></span>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="col-2"><img class="img-fluid" src="../../<%=x.cart[0].pImage%>"></div>
                             <div class="col">
                                 <div class="row text-muted"><%=x.cart[0].pName%></div>
@@ -23,16 +29,26 @@
                             </div>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="col">
-                                <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                <a class="minus-btn" type="button" name="button" style="text-decoration: none;">-</a>
+                                <input type="text" name="name" value="<%=x.quantity%>" style="
+                                    -webkit-appearance: none;
+                                    border: none;
+                                    text-align: center;
+                                    width: 32px;
+                                    font-size: 16px;
+                                    color: #43484D;
+                                    font-weight: 300;">
+                                <a class="plus-btn" type="button" name="button" style="text-decoration: none;">+</a>
                             </div>
-                            <div class="col">₹<%=x.cart[0].pPrice%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/cartDelete/<%=x._id%>" ><i class="fa-solid fa-trash" style="color: red;"></i></a></div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="col">₹ <%=x.cart[0].pPrice%></div>
                         </div>
-                        <%}%> 
-                        <%}else{%>
-                        <h1>Data not found.</h1>
-                        <%}%>
                     </div>
-                   </table>  
+                   </table> 
+                   <%}%> 
+                        <%}else{%>
+                       <h1>Data not found.</h1>
+                       <%}%> 
                     <div class="back-to-shop"><a href="/viewuser_products">Back to shop &leftarrow;</a><span class="text-muted"></span></div>
                 </div>
                 <div class="col-md-4 summary">
@@ -52,11 +68,46 @@
                         <div class="col">TOTAL PRICE</div>
                         <div class="col text-right">₹ 137.00</div>
                     </div>
-                    <button class="btn">CHECKOUT</button>
+                    <button class="btn"><a href="/success" style="color: white; text-decoration:none">CHECKOUT</a></button>
                 </div>
-            </div> 
-        </div><br><br><br>
+                </div> 
+        </div>
+        <script type="text/javascript">
+            $('.minus-btn').on('click', function(e) {
+                  e.preventDefault();
+                  var $this = $(this);
+                  var $input = $this.closest('div').find('input');
+                  var value = parseInt($input.val());
+      
+                  if (value > 1) {
+                      value = value - 1;
+                  } else {
+                      value = 0;
+                  }
+      
+              $input.val(value);
+      
+              });
+      
+              $('.plus-btn').on('click', function(e) {
+                  e.preventDefault();
+                  var $this = $(this);
+                  var $input = $this.closest('div').find('input');
+                  var value = parseInt($input.val());
+      
+                  if (value < 100) {
+                    value = value + 1;
+                  } else {
+                      value =100;
+                  }
+      
+                  $input.val(value);
+              });
+      
+            $('.like-btn').on('click', function() {
+              $(this).toggleClass('is-active');
+            });
+          </script>
+          <br><br><br>
 
         <%- include('../Includes/footer.ejs')%>
-        
-        

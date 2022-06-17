@@ -1,0 +1,34 @@
+<%-include('../Includes/header.ejs')%>
+<link rel="stylesheet" type="text/css" href="/CSS/login.css">
+</head>
+
+<body>
+    <%-include('../Includes/navigation.ejs')%>
+    <br>
+    <div id="form">
+        <form action="postLogin" method="POST">
+            <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+            <h2 id="login"><b>Login Form</b></h2><p></p>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" required value="<%if (cookie_data.cookieData){%> <%=cookie_data.cookieData.emailCookie%> <%}%>">
+            <br><br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="pwd" required>
+            <br>
+            <input type="checkbox" style="width: 15; height: 15;" name="remember" checked="checked">
+            <label for="remember">Remember me</label><br><br>
+            <a id="forgot">Forgot Password?</a><br>
+            <p>
+            <input id="submit" type="submit" value="LOGIN"></p>
+            <p id="member">
+                Not a member? <a id="signup" href="/registration">Signup now</a>
+            </p>
+            <%if(errorMsg){%>
+                <div class="errorMessage"><%=errorMsg%></div>
+            <%}%><br>
+        </form>
+    </div><br><br>
+
+            <%-include('../Includes/footer.ejs')%>

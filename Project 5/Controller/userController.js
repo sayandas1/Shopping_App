@@ -49,17 +49,17 @@ exports.addtoCart = (req,res) =>{
 
     console.log("After add to cart: pId:",pId,"Q:",quantity,"ID:",userId);
 
-    // const cartData = cartModel.find({userId: userId, productId: pId});
-    // if(cartData==''){
-    //     let productData = productModel.findById(pId)
-    //     console.log("Product data:",productData);
-    //     cartValue.push(productData);
-    //     const cartProduct = new cartModel({productId:pId,quantity:quantity,userId:userId,cart:cartValue});
-    //     const savedCartData = cartProduct.save();
-    //     if(savedCartData){
-    //         res.redirect('/add_to_cart');
-    //     }
-    // }
+    const cartData = cartModel.find({userId: userId, productId: pId});
+    if(cartData==''){
+        let productData = productModel.findById(pId)
+        console.log("Product data:",productData);
+        cartValue.push(productData);
+        const cartProduct = new cartModel({productId:pId,quantity:quantity,userId:userId,cart:cartValue});
+        const savedCartData = cartProduct.save();
+        if(savedCartData){
+            res.redirect('/add_to_cart');
+        }
+    }
 
     cartModel.find({userId:userId, productId:pId})
     .then(cartData=>{
@@ -82,7 +82,7 @@ exports.addtoCart = (req,res) =>{
         }
         else if(cartData[0].productId == pId)
         {
-            console.log("Product already added");
+            console.log("Product already added to the cart");
             res.redirect('/add_to_cart');
         }
         else
@@ -126,5 +126,12 @@ exports.cartDelete = (req,res) =>{
         res.redirect('/add_to_cart');
     }).catch(err=>{
         console.log("Error to delete data",err);
+    })
+}
+
+exports.success = (req, res) => {
+    res.render('User/success', {
+        titlePage: "success",
+        path: '/success'
     })
 }

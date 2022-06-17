@@ -57,14 +57,23 @@ exports.editPostData = (req,res) =>{
     let edited_name = req.body.name;
     let edited_price = req.body.price;
     let edited_desc = req.body.description;
-    // let edited_image = req.file;
+    let edited_image = req.file;
     let edited_id = req.body.id;
+
+    let old_image_url = req.body.old_image;
+    let image_url;
+    if(edited_image === undefined)
+    {
+        image_url = old_image_url;
+    }else{
+        image_url = edited_image.path;
+    }
 
     productModel.findById(edited_id).then(oldData=>{
         oldData.pName = edited_name;
         oldData.pPrice = edited_price;
         oldData.pDesc = edited_desc;
-        // oldData.pImage = edited_image;
+        oldData.pImage = image_url;
     
     return oldData.save().then(results=>{
         console.log("Edited product is saved");

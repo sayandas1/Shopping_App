@@ -16,7 +16,9 @@
                 <label for="description">Product Description:</label><br>
                 <input type="text" name="description" value="<%=data.pDesc%>"><br><br>
                 <label for="image">Product Images:</label><br>
-                <i class="fa-solid fa-cloud-arrow-up"></i><input type="file" name="image" value="../../<%=data.pImage%>"><br><br>
+                <input type="file" name="image">
+                <input type="hidden" value="<%=data.pImage%>">
+                <img src="../../<%=data.pImage%>" alt="image" width="75"><br><br>
                 <input type="hidden" name="id" value="<%=data._id%>">
                 <input type="submit" value="UPDATE PRODUCT NOW">
             </form>
