@@ -1,0 +1,20 @@
+.search{
+    position: relative;
+   left:5vmax;
+   margin-left: 900px;
+   margin-bottom: 30px;
+}
+
+.search >input{
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.76);
+    width: 15vmax;
+    font-size: 1.1vmax;
+    outline: none;
+    color:rgb(61, 61, 61);
+    font-weight: 100;
+    text-align: center;
+    
+  }
+ 
+  

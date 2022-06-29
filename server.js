@@ -20,7 +20,7 @@ const multer = require('multer');
 const csurfProtection = csurf();
 
 const mongoose = require('mongoose');
-const dbDriver = 'mongodb+srv://<>:<>@cluster0.9eruc.mongodb.net/mongoose_project?retryWrites=true&w=majority';
+const dbDriver = 'mongodb+srv://sayandas:sd123@cluster0.9eruc.mongodb.net/mongoose_project?retryWrites=true&w=majority';
 
 const userModel = require('./Model/auth');
 
@@ -37,7 +37,7 @@ appServer.use(flash());
 
 //to store data in mongodb session collection
 const storeValue = new moongodb_session({
-    uri: 'mongodb+srv://<>:<>@cluster0.9eruc.mongodb.net/mongoose_project',
+    uri: 'mongodb+srv://sayandas:sd123@cluster0.9eruc.mongodb.net/mongoose_project',
     collection: 'user-session'
 })
 
