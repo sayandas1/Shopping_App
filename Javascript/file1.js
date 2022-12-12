@@ -261,13 +261,13 @@
 // qube(5);
 
 //spread operator(object margin)  ... Ellipsis
+//allows us to quickly copy all or part of an existing array or object into another array or object.
 // let obj1={fName:"Sayan",lName:"Das",village:"Rasulpur"}
 // let obj2={city:"Burdwan",pin:713151,po:"Rasulpur",fName:"Rohit"}
 // let obj3={phone:123456,hobby:"learn new technology"}
 
 // let person={...obj1,...obj2,...obj3};
 // console.log(person);
-
 
 //object destructuing(break the main object)
 // let obj={fName:"Sayan",lName:"Das",village:"Rasulpur",city:"Burdwan",pin:713151,po:"Rasulpur"}
@@ -385,7 +385,7 @@
 //     }
 //     return result;
 // }
-// console.log(restFunc(3,5,9));
+// console.log(restFunc(1,2,3));
 
 //Reduce Method
 //Calls the specified callback function for all the elements in an array.

@@ -7,14 +7,15 @@
 
             <br>
             <%if(data.length>0){%>
-             <div class="search">
-             <form action="/search" method="POST">
-            <input type="hidden" value="<%=csrf_token%>" name="_csrf">
-            <input type="text" name="search" placeholder="Search any product..." style="margin-left: 920px; text-align: center;">
-             <button type="submit" class="btn btn-success">Search</button>
-            </form>
-            </div>
-                <div class="container">
+                <div class="search">
+                    <form action="/search" method="POST">
+                   <input type="hidden" value="<%=csrf_token%>" name="_csrf">
+                   <input type="text" name="search" placeholder="Search any product..." style="margin-left: 920px; text-align: center; outline: none;">
+                    <button type="submit" class="btn btn-success">Search</button>
+                   </form>
+                </div>
+                    
+                < <div class="container">
                     <div class="row">
                         <%for(let x of data){%>
                             <div class="col-lg-4">

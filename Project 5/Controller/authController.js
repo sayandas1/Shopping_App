@@ -1,8 +1,6 @@
 const authModel = require('../Model/auth');
-const path = require('path');
 const bcrypt = require('bcryptjs');
 const nodemailer = require("nodemailer");
-const { use } = require('../Router/authRoute');
 
 const transporter = nodemailer.createTransport({
   host:'smtp',
